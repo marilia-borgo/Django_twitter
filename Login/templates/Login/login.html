@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Login/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'Login/styles-Login.css' %}">
+    <link rel="icon" href="{% static 'Login/imagens/title-twitter.png'%}">
+    <title>Entrar no Twitter</title>
+    <script src="https://kit.fontawesome.com/2fd1f5b83e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="conteudo-login">
+            <div class="conteudo-welcome">
+                <div class="line-css"></div> <span class="welcome">Bem Vindo(a) ao Twitter</span> <div class="line-css"></div>
+            </div>
+            <i class="fa-brands fa-twitter icon-twitter"></i>
+            <h2 class="font-sem-serif">Entrar no Twitter</h2>
+            <button type="button" class="btn-login">
+                <i class="fa fa-google"></i>
+                <a class="white link-login" href="{% url 'social:begin' 'google-oauth2' %}">
+                    Continuar com o Google
+                </a>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
