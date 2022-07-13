@@ -129,3 +129,10 @@ dmypy.json
 .pyre/
 
 db.sqlite3/
+
+Login/migrations/__pycache__
+Login/views/__pycache__
+Login/__pycache__
+post/migrations/__pycache__
+post/__pycache__
+Twitter/__pycache__
