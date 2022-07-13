@@ -9,17 +9,10 @@
 </head>
 <body>
     <h1 class="color">olá {{ request.user.username }}</h1>
-<<<<<<< HEAD
     <a href="{% url 'post_new' %}">+ New Twitte</a>
     <ul>
         {% for post in posts %}
         <li><a href="{% url 'post_detail' post.pk %}">{{ post }}</a></li>
-=======
-
-    <ul>
-        {% for post in posts %}
-        <li>Post: {{ post }}</li>
->>>>>>> 143a7335e373959323d09fa9ceda7520d600ec3a
         {% endfor %}
     </ul>
 
