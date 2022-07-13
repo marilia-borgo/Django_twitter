@@ -5,11 +5,7 @@ services:
     postgres_local:
       image: "postgres:13.3-alpine"
       ports:
-<<<<<<< HEAD
-        - "54432:5432"
-=======
         - "55432:5432"
->>>>>>> 143a7335e373959323d09fa9ceda7520d600ec3a
       env_file:
         - .env
       volumes:
