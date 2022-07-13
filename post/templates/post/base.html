@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 class="color">olá {{ request.user.username }}</h1>
-
+    <a href="{% url 'post_new' %}">+ New Blog Post</a>
     <ul>
         {% for post in posts %}
         <li>Post: {{ post }}</li>
