@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+<<<<<<< HEAD
+=======
+import django_on_heroku
+>>>>>>> 143a7335e373959323d09fa9ceda7520d600ec3a
 
 load_dotenv()
 
@@ -29,7 +33,11 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = []
+=======
+ALLOWED_HOSTS = ['*']
+>>>>>>> 143a7335e373959323d09fa9ceda7520d600ec3a
 
 
 # Application definition
@@ -148,4 +156,9 @@ AUTHENTICATION_BACKENDS = [
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv("SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.getenv("SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
 
+<<<<<<< HEAD
+=======
+django_on_heroku.settings(locals())
+
+>>>>>>> 143a7335e373959323d09fa9ceda7520d600ec3a
 
