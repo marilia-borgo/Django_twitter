@@ -168,3 +168,8 @@ button >.fa-gear{
     gap: 25px;
 }
 
+.container-tweetar{
+    width: 100%;
+    text-align: right;
+}
+

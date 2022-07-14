@@ -41,8 +41,13 @@
                     Configurações</span></button> 
             </div>
             <div class="timeline">
-                <h1>olá {{ request.user.username }}</h1>
-                <a href="{% url 'post_new' %}">+ New Twitte</a>
+                <div class="tweet">
+                    <h1>olá {{ request.user.username }}</h1>
+                    <div class="container-tweetar">
+                        <a href="{% url 'post_new' %}">+ New Twitte</a>
+                    </div>
+                    
+                </div>
                 <ul>
                     {% for post in posts %}
                     <li>
