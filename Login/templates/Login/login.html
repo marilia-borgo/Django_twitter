@@ -16,7 +16,6 @@
     <script src="https://kit.fontawesome.com/2fd1f5b83e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <div class="area-imagem">
         <img class="capa-login" src="{% static 'Login/imagens/twitter_capa.png' %}"/>
         <i class="fa-brands fa-twitter icon-twitter-imagem"></i>
@@ -34,7 +33,6 @@
                 </a>
             </button>
             <p class="termos-servico">Ao se inscrever, você concorda com os <span class="font-blue">Termos de Serviço</span> e a <span class="font-blue">Política de Privacidade</span>, incluindo o <span class="font-blue">Uso de Cookies</span>.</p>
-
             <h3 class="titulo-terciario titulo">Já tem uma conta?</h3>
             <button type="button" class="btn-login">
                 <a class="font-blue link-login" href="{% url 'social:begin' 'google-oauth2' %}">
@@ -43,9 +41,8 @@
             </button>
             </button>
         </div>
-
     </div>
-    </div>di
+    </div>
     {% endblock %}
 </body>
 

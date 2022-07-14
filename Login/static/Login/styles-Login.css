@@ -31,18 +31,14 @@ body{
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 20px;
 }
 
 .conteudo-login{
-
     background-color: white;
-
     height: 350px;
-    width: 350px;
+    width: 517px;
     background-color: rgb(233, 233, 233);
-
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -122,5 +118,5 @@ p {
 }
 
 .titulo-terciario {
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
