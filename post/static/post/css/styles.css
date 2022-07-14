@@ -1,0 +1,148 @@
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo-page{
+    display: flex;
+    gap: 73px;
+}
+
+.timeline{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    border-right: 0.5px solid #e8e8e8b5;
+    border-left: 0.5px solid #e8e8e8b5;
+}
+
+button >.fa-hashtag{
+    font-size: 33px;
+}
+
+button >.fa-gear{
+    font-size: 33px;
+}
+
+.margin-top{
+    margin-top: 21.440px;
+}
+
+.explore{
+    border: none;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 35px;
+    background-color: white;
+}
+
+.text-settings{
+    font-weight: normal;
+}
+
+.icon-btn{
+    width: 40px;
+    margin-right: 20px;
+}
+
+.tamanho-svg{
+    width: 40px;
+}
+
+.color-icon-twitter{
+    fill: rgb(29, 155, 240);
+}
+
+.settings{
+    margin-top: 10px;
+}
+
+.container-tweet{
+    width: 100%;
+    height: fit-content;
+    border-top: 0.5px solid #e8e8e8b5;
+    border-bottom: 0.5px solid #e8e8e8b5;
+}
+
+.tweet{
+    padding: 10px 16px;
+}
+
+.space-tweet{
+    height: 18px;
+}
+
+.username-text{
+    color: gray;
+    font-size: 15px;
+}
+
+.reactions{
+    margin-top: 20px;
+    display: flex;
+    gap: 100px;
+}
+
+.tamanho-reactions{
+    width: 20px;
+}
+
+.filtros{
+    width: 300px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 20px;
+}
+
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+    background: #ccc;
+}
+
