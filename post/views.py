@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 
 
 def post_list(request):
-    posts = Post.objects.all()
+    posts = Post.objects.order_by('-date_posted')
     print(posts)
     return render(request, 'post/base.html', {
         "posts": posts
