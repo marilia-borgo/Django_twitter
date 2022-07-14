@@ -19,6 +19,16 @@
 
 </head>
 <body>
+
+    <h1 class="color">olá {{ request.user.username }}</h1>
+    <a href="{% url 'post_new' %}">+ New Twitte</a>
+    <ul>
+        {% for post in posts %}
+        <li><a href="{% url 'post_detail' post.pk %}">{{ post }}</a></li>
+        {% endfor %}
+    </ul>
+
+
     <div class="container">
         <div class="conteudo-page">
             <div class="settings">
