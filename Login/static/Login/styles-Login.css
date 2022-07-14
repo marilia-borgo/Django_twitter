@@ -1,69 +1,113 @@
-body{
-    background-color: rgba(0, 0, 0, 0.4);
+:root {
+    --azul-twitter: #1d9bf0;
 }
 
-.container {
+body{
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+    display: flex;
+}
+
+.area-imagem {
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+}
+
+.capa-login {
+    position: fixed;
+    z-index: -1;
+}
+
+.icon-twitter-imagem {
+    color: #FFFFFF;
+    font-size: 20rem;
+}
+
+.container {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .conteudo-login{
-    height: 350px;
-    width: 350px;
     background-color: white;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 16px;
 }
 
 .btn-login {
-    width: 65%;
     font-size: 10px;
-    height: 7%;
-    border-radius: 10px;
-    margin-top: 34px;
+    height: 40px;
+    width: 300px;
+    padding: 0 16px;
+    border-radius: 999px;
     border: 1px solid #dadce0;
-    background-color: white;
+    background-color: rgb(240, 240, 240);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link-login{
     text-decoration: none;
-    color: #626262;
+    color: #0f1419;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.termos-servico {
+    font-size: 11px;
+    width: 300px;
+}
+
+.font-blue {
+    color: var(--azul-twitter);
+}
+
+.font-white {
+    color: #FFFFFF;
 }
 
 .font-sem-serif{
-    font-family: sans-serif;
     margin-bottom: 10px;
 }
 
-.line-css{
-    width: 25%;
-    height: 1px;
-    background-color: #209bec;
-    display: inline-block;
+.titulo-principal {
+    margin: 48px 0;
+    font-size: 64px;
 }
 
-.welcome{
-    font-family: sans-serif;
-    display: inline-block;
-    font-size: 12px;
-    color: #209bec;
+.titulo-secundario {
+    margin: 0 0 32px;
+    font-size: 31px;
 }
 
-.conteudo-welcome{
-    width: 78%;
-    margin-top: 11%;
-    margin-bottom: 26px;
-}
-
-.fa-twitter{
-    color: #209bec;
+.titulo {
+    font-family: 'Archivo', sans-serif;
 }
 
 .icon-twitter{
-    font-size: 50px;
+    font-size: 42px;
+    padding: 0 0 12px;
+    color: var(--azul-twitter);
+}
+
+.icon-google {
+    width: 15px;
+    margin-right: 0.3rem;
+}
+
+p {
+    color: #536471
+}
+
+.titulo-terciario {
+    margin-top: 4rem;
 }

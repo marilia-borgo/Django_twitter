@@ -1,15 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 from .models import Post
-
-# Create your views here.
-
-
-# class PostagemList(ListView):
-#     model = Post
-#     template_name = 'post/base.html'
-#     # template_name = 'post/base.html'
+from django.urls import reverse_lazy
 
 def post_list(request):
     posts = Post.objects.all()
@@ -21,8 +14,13 @@ def post_list(request):
 class PostDetailView(DetailView): # new
     model = Post
     template_name = 'post/post_detail.html'
-    
+
 class PostCreateView(CreateView): # new
     model = Post
     template_name = 'post/post_new.html'
     fields = '__all__'
+
+class PostDeleteView(DeleteView): # new
+    model = Post
+    template_name = 'post/post_delete.html'
+    success_url = reverse_lazy('post_list')
