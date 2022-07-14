@@ -11,7 +11,7 @@ class Post(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)
 
     def __str__(self) :
-        return f"{self.postagem} | {self.date_posted}"
+        return f"{self.postagem}"
 
     def get_absolute_url(self): 
         return reverse('post_list')

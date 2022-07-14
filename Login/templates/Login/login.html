@@ -16,10 +16,12 @@
     <script src="https://kit.fontawesome.com/2fd1f5b83e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <div class="area-imagem">
         <img class="capa-login" src="{% static 'Login/imagens/twitter_capa.png' %}"/>
         <i class="fa-brands fa-twitter icon-twitter-imagem"></i>
     </div>
+    {% block conteudo %}
     <div class="container">
         <div class="conteudo-login">
             <i class="fa-brands fa-twitter icon-twitter"></i>
@@ -41,8 +43,10 @@
             </button>
             </button>
         </div>
-    </div>
 
+    </div>
+    </div>di
+    {% endblock %}
 </body>
 
 </html>
