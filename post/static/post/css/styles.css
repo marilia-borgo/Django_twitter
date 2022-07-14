@@ -6,7 +6,7 @@
 
 .conteudo-page{
     display: flex;
-    gap: 73px;
+    gap: 45px;
 }
 
 .timeline{
@@ -25,18 +25,25 @@ button >.fa-gear{
     font-size: 33px;
 }
 
-.margin-top{
-    margin-top: 21.440px;
+.margin-icon-search{
+    margin-left: 25px;
 }
 
 .explore{
     border: none;
+    height: 45px;
     display: flex;
     font-weight: bold;
     align-items: center;
-    font-size: 25px;
+    font-size: 19px;
     margin-bottom: 35px;
     background-color: white;
+    cursor: pointer;
+}
+
+.explore:hover{
+    background-color: #eff3f4a3;
+    border-radius: 20px;
 }
 
 .text-settings{
@@ -44,12 +51,12 @@ button >.fa-gear{
 }
 
 .icon-btn{
-    width: 40px;
+    width: 30px;
     margin-right: 20px;
 }
 
 .tamanho-svg{
-    width: 40px;
+    width: 30px;
 }
 
 .color-icon-twitter{
@@ -91,12 +98,15 @@ button >.fa-gear{
 }
 
 .filtros{
-    width: 300px;
+    width: 400px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .topnav {
     overflow: hidden;
-    background-color: #e9e9e9;
+    background-color: white;
 }
 
 .topnav a {
@@ -120,15 +130,20 @@ button >.fa-gear{
 }
 
 .topnav .search-container {
-    float: right;
+    border-radius: 20px;
+    background-color: #eff3f4;
+    display: flex;
+    align-items: center;
+    width: 90%;
 }
 
 .topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
+    padding: 9px;
     font-size: 17px;
     border: none;
+    height: 100%;
     border-radius: 20px;
+    background-color: transparent;
 }
 
 .topnav .search-container button {
@@ -143,6 +158,13 @@ button >.fa-gear{
 }
 
 .topnav .search-container button:hover {
-    background: #ccc;
+    background: gray;
+}
+
+.search-style{
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
