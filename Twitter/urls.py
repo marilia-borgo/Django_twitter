@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Login.urls')),
     path('social-auth/', include('social_django.urls', namespace='social-auth')),
-    path('post/', include('post.urls')),
+    path('logado/', include('post.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

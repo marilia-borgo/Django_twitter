@@ -8,4 +8,4 @@ class IndexView(LoginRequiredMixin, View):
     
     def get(self, request):
         data = { 'user': request.user }
-        return redirect('post/logado')
+        return redirect('logado/posts')
