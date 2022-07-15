@@ -4,14 +4,21 @@ from django.views.generic.edit import CreateView, DeleteView
 from .models import Comentario, Post
 from django.urls import reverse_lazy
 
+from GoogleNews import GoogleNews
 
+googlenews = GoogleNews()
+googlenews = GoogleNews(period='d')
+googlenews = GoogleNews(lang='pt', region='BR')
+googlenews.search('BRASIL')
 
 def post_list(request):
     posts = Post.objects.order_by('-date_posted')
     comentarios = Comentario.objects.all()
+    noticias = googlenews.results()
     return render(request, 'post/base.html', {
         "posts": posts,
         "comentarios": comentarios,
+        "noticias": noticias
     })
 
 class PostDetailView(DetailView): # new
