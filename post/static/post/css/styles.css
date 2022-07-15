@@ -7,6 +7,7 @@
 .conteudo-page{
     display: flex;
     gap: 45px;
+    height: 100%;
 }
 
 .timeline{
@@ -114,7 +115,7 @@ button >.fa-gear{
     display: block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    /* padding: 14px 16px; */
     text-decoration: none;
     font-size: 17px;
 }
@@ -171,4 +172,19 @@ button >.fa-gear{
 .container-tweetar{
     width: 100%;
     text-align: right;
+}
+
+.notices{
+    width: 100%;
+    height: fit-content;
+    background: #eff3f4;
+    border-radius: 20px;
+}
+
+.container-notices{
+    padding: 20px;
+}
+
+.space-tweet-notice{
+    height: 40px;
 }
