@@ -15,4 +15,15 @@ class Post(models.Model):
 
     def get_absolute_url(self): 
         return reverse('post_list')
+
+class Comentario(models.Model):
+    id_post = models.ForeignKey(Post, on_delete=models.CASCADE, null=True, blank=True)
+    comentario = models.CharField(max_length=180, null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE,related_name='comentarios', null=True, blank=True)
+
+    def __str__(self):
+        return self.comentario
+
+    def get_absolute_url(self):
+        return reverse('post_list')
     
