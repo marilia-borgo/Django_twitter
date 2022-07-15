@@ -1,16 +1,17 @@
 from django.shortcuts import render
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView
-from .models import Post
+from .models import Comentario, Post
 from django.urls import reverse_lazy
 
 
 
 def post_list(request):
     posts = Post.objects.order_by('-date_posted')
-    print(posts)
+    comentarios = Comentario.objects.all()
     return render(request, 'post/base.html', {
         "posts": posts,
+        "comentarios": comentarios,
     })
 
 class PostDetailView(DetailView): # new
