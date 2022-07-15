@@ -20,7 +20,7 @@ class PostDetailView(DetailView): # new
 class PostCreateView(CreateView): # new
     model = Post
     template_name = 'post/post_new.html'
-    fields = ['user','postagem', 'date_posted']
+    fields = ['postagem', 'date_posted']
 
 class PostDeleteView(DeleteView): # new
     model = Post
