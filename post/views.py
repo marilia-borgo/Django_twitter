@@ -22,6 +22,10 @@ class PostCreateView(CreateView): # new
     template_name = 'post/post_new.html'
     fields = ['postagem']
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(PostCreateView, self).form_valid(form)
+
 class PostDeleteView(DeleteView): # new
     model = Post
     template_name = 'post/post_delete.html'
