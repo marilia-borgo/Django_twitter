@@ -1,9 +1,9 @@
-from pickle import GET
 from django.shortcuts import render
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView
 from .models import Post
 from django.urls import reverse_lazy
+
 
 
 def post_list(request):
@@ -16,7 +16,7 @@ def post_list(request):
 class PostDetailView(DetailView): # new
     model = Post
     template_name = 'post/post_detail.html'
-
+    
 class PostCreateView(CreateView): # new
     model = Post
     template_name = 'post/post_new.html'
