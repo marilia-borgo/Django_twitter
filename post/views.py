@@ -1,8 +1,9 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView
 from .models import Comentario, Post
-from django.urls import reverse_lazy
+from django.urls import reverse, reverse_lazy
 
 from GoogleNews import GoogleNews
 
@@ -21,6 +22,12 @@ def post_list(request):
         "noticias": noticias
     })
 
+def tweet(request):
+    if request.method == "POST":
+        new_tweet = request.POST["new_tweet"]
+        Post.objects.create(user=request.user,postagem=new_tweet)
+        return HttpResponseRedirect(reverse("post_list"))
+
 class PostDetailView(DetailView): # new
     model = Post
     template_name = 'post/post_detail.html'
@@ -38,6 +45,8 @@ class PostDeleteView(DeleteView): # new
     model = Post
     template_name = 'post/post_delete.html'
     success_url = reverse_lazy('post_list')
+
+
 
 
 
