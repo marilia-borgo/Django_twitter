@@ -44,7 +44,12 @@
                 <div class="tweet">
                     <h1>olá {{ request.user.username }}</h1>
                     <div class="container-tweetar">
-                        <a href="{% url 'post_new' %}">+ New Twitte</a>
+                        <form action="{% url 'new.post' %}" method="post">
+                            {% csrf_token %}
+                            <input type="text" name="new_tweet" placeholder="O que está acontecendo?" class="input-tweet">
+                            <input type="submit" value="Tweetar" class="btn-tweetar">
+                        </form>
+                        <!-- <a href="{% url 'post_new' %}">+ New Twitte</a> -->
                     </div>
                 </div>
                     <ul>
@@ -91,7 +96,7 @@
                                     <div class="container-notices">
                                         {{ noticia.media }} {{ noticia.date }}  
                                         <h3>{{ noticia.desc }}</h3>
-                                        <h5><a href="{{ noticia.link }}">Leia Mais</a></h5>                                
+                                        <h5><a href="{{ noticia.link }}" target="_blank">Leia Mais</a></h5>                              
                                         <div class="space-tweet-notice"></div>
                                     </div>
                                 </li>
