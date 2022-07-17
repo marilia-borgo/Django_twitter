@@ -28,7 +28,6 @@ body{
     font-size: 20rem;
 }
 
-
 .container {
     background-color: #FFFFFF;
     display: flex;
@@ -38,13 +37,14 @@ body{
 
 .conteudo-login{
     background-color: white;
-    height: 350px;
+    height: fit-content;
     width: 517px;
     background-color: rgb(233, 233, 233);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     padding: 16px;
+    align-items: center;
 }
 
 .btn-login {
@@ -93,11 +93,13 @@ body{
 .titulo-principal {
     margin: 48px 0;
     font-size: 64px;
+    text-align: center;
 }
 
 .titulo-secundario {
     margin: 0 0 32px;
     font-size: 31px;
+    text-align: center;
 }
 
 .titulo {
