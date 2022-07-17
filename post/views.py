@@ -27,6 +27,7 @@ def tweet(request):
         new_tweet = request.POST["new_tweet"]
         Post.objects.create(user=request.user,postagem=new_tweet)
         return HttpResponseRedirect(reverse("post_list"))
+        
 
 class PostDetailView(DetailView): # new
     model = Post

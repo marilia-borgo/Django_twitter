@@ -171,7 +171,6 @@ button >.fa-gear{
 
 .container-tweetar{
     width: 100%;
-    text-align: right;
 }
 
 .notices{
@@ -187,4 +186,22 @@ button >.fa-gear{
 
 .space-tweet-notice{
     height: 40px;
+}
+
+.btn-tweetar{
+    border: none;
+    background-color: #2196F3;
+    height: 37px;
+    width: 100px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.input-tweet{
+    border: none;
+    width: 350px;
+    font-size: 17px;
 }

@@ -46,10 +46,10 @@
                     <div class="container-tweetar">
                         <form action="{% url 'new.post' %}" method="post">
                             {% csrf_token %}
-                            <input type="text" name="new_tweet">
-                            <input type="submit" value="Tweetar">
+                            <input type="text" name="new_tweet" placeholder="O que está acontecendo?" class="input-tweet">
+                            <input type="submit" value="Tweetar" class="btn-tweetar">
                         </form>
-                        <a href="{% url 'post_new' %}">+ New Twitte</a>
+                        <!-- <a href="{% url 'post_new' %}">+ New Twitte</a> -->
                     </div>
                 </div>
                     <ul>
