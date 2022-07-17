@@ -8,4 +8,5 @@ urlpatterns = [
     path('logado/new/', PostCreateView.as_view(), name='post_new'),
     path('posts/', views.post_list, name='post_list'),
     path('posts/new_post', views.tweet, name="new.post"),
+    path('logado/<int:post_id>/comentarios', views.comentarios, name='view.comentario'),
 ]

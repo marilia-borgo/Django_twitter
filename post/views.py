@@ -2,6 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView
+from requests import post
 from .models import Comentario, Post
 from django.urls import reverse, reverse_lazy
 
@@ -27,7 +28,13 @@ def tweet(request):
         new_tweet = request.POST["new_tweet"]
         Post.objects.create(user=request.user,postagem=new_tweet)
         return HttpResponseRedirect(reverse("post_list"))
-        
+
+def comentarios(request, post_id):
+    if request.method == "POST":
+        post = Post.objects.get(pk=post_id)      
+        new_comment = request.POST["new_comment"]
+        Comentario.objects.create(id_post_id=post.id, comentario=new_comment, user=request.user)
+        return HttpResponseRedirect(reverse("post_list")) 
 
 class PostDetailView(DetailView): # new
     model = Post
