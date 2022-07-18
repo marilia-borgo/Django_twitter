@@ -9,6 +9,10 @@ class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     postagem = models.TextField(null=True, blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
+    likes = models.ManyToManyField(User, related_name='twitter_post')
+    
+    def total_likes(self):
+        return self.likes.count()
 
     def __str__(self) :
         return f"{self.postagem}"

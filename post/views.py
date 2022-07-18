@@ -1,10 +1,11 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView
 from requests import post
 from .models import Comentario, Post
 from django.urls import reverse, reverse_lazy
+from django.template import context
 
 from GoogleNews import GoogleNews
 
@@ -12,6 +13,7 @@ googlenews = GoogleNews()
 googlenews = GoogleNews(period='d')
 googlenews = GoogleNews(lang='pt', region='BR')
 googlenews.search('BRASIL')
+
 
 def post_list(request):
     posts = Post.objects.order_by('-date_posted')
@@ -36,6 +38,21 @@ def comentarios(request, post_id):
         Comentario.objects.create(id_post_id=post.id, comentario=new_comment, user=request.user)
         return HttpResponseRedirect(reverse("post_list")) 
 
+
+def LikeView(request, pk):
+    post = get_object_or_404(Post, id=request.POST.get('post_id'))
+    post.likes.add(request.user)
+    return HttpResponseRedirect(reverse('post_list'))
+
+def get_context_data(request,post_id):
+    post = get_object_or_404(Post, id=request.POST.get('post_id'))
+    total_likes = post.total_likes()
+    context["total_likes"] = total_likes
+    return context
+
+
+
+
 class PostDetailView(DetailView): # new
     model = Post
     template_name = 'post/post_detail.html'
@@ -53,6 +70,8 @@ class PostDeleteView(DeleteView): # new
     model = Post
     template_name = 'post/post_delete.html'
     success_url = reverse_lazy('post_list')
+
+
 
 
 
