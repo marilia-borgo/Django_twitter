@@ -205,3 +205,14 @@ button >.fa-gear{
     width: 350px;
     font-size: 17px;
 }
+
+.container-comentario{
+    width: 100%;
+    height: fit-content;
+    border-top: 0.5px solid #e8e8e8b5;
+    border-bottom: 0.5px solid #e8e8e8b5;
+    padding: 2%;
+}
+
+
+
