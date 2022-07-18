@@ -31,26 +31,23 @@ body{
 .container {
     background-color: #FFFFFF;
     display: flex;
-    justify-content: center;
     padding: 20px;
 }
 
 .conteudo-login{
-    background-color: white;
+    background-color: #FFFFFF;
     height: fit-content;
     width: 517px;
-    background-color: rgb(233, 233, 233);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     padding: 16px;
-    align-items: center;
 }
 
 .btn-login {
     font-size: 10px;
-    height: 40px;
-    width: 300px;
+    height: 35px;
+    width: 250px;
     padding: 0 16px;
     border-radius: 999px;
     border: 1px solid #dadce0;
@@ -62,14 +59,20 @@ body{
 }
 
 .btn-login:hover {
-    background-color: #f0f0f0;
+    background-color: #ecf3fe;
+    transition: 0.3s;
+    border: 1px solid #d2e3fc;
+}
+
+.btn-login:active {
+    background-color: #e0ebfd;
     transition: 0.3s;
 }
 
 .link-login{
     text-decoration: none;
     color: #0f1419;
-    font-size: 15px;
+    font-size: 0.7rem;
     font-weight: bold;
 }
 
@@ -92,14 +95,17 @@ body{
 
 .titulo-principal {
     margin: 48px 0;
-    font-size: 64px;
-    text-align: center;
+    font-size: 3rem;
 }
 
 .titulo-secundario {
     margin: 0 0 32px;
-    font-size: 31px;
-    text-align: center;
+    font-size: 1.5rem;
+}
+
+.titulo-terciario {
+    font-size: 1rem;
+    margin-top: 3rem;
 }
 
 .titulo {
@@ -113,14 +119,10 @@ body{
 }
 
 .icon-google {
-    width: 15px;
+    width: 12px;
     margin-right: 0.3rem;
 }
 
 p {
     color: #536471
-}
-
-.titulo-terciario {
-    margin-top: 1rem;
 }
