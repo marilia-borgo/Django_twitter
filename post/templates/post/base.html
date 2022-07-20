@@ -42,7 +42,7 @@
             </div>
             <div class="timeline">
                 <div class="tweet">
-                    <h1>olá {{ request.user.username }}</h1>
+                    <h1 class="ola">olá {{ request.user.username }}</h1>
                     <div class="container-tweetar">
                         <img class="image-profile-post" src="{{ request.user.profile.foto.url }}" alt="">
                         <form action="{% url 'new.post' %}" method="post">
@@ -128,7 +128,7 @@
                             {% for noticia in noticias %}
                                 <li>
                                     <div class="container-notices">
-                                        {{ noticia.media }} {{ noticia.date }}  
+                                        <span class="title-news">{{ noticia.media }} {{ noticia.date }}</span> 
                                         <h3>{{ noticia.desc }}</h3>
                                         <h5><a href="{{ noticia.link }}" target="_blank">Leia Mais</a></h5>                              
                                         <div class="space-tweet-notice"></div>

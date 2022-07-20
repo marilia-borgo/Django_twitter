@@ -1,3 +1,11 @@
+:root {
+    --font-gray: #5b6b78;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+ }
+ 
 .container{
     height: 100%;
     display: flex;
@@ -6,17 +14,26 @@
 
 .conteudo-page{
     display: flex;
-    gap: 45px;
+    gap: 35px;
     height: 100%;
-}
+    justify-content: center;
+ } 
 
-.timeline{
-    width: 700px;
+ .timeline{
+    width: 50%;
+    min-width: 490px;
     display: flex;
     flex-direction: column;
     border-right: 0.5px solid #e8e8e8b5;
     border-left: 0.5px solid #e8e8e8b5;
-}
+ }
+ 
+
+.ola {
+    font-size: 18px;
+    text-transform: capitalize;
+ }
+ 
 
 button >.fa-hashtag{
     font-size: 33px;
@@ -99,11 +116,12 @@ button >.fa-gear{
 }
 
 .filtros{
-    width: 400px;
+    margin-left:10px;
+    width: 350px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-}
+ } 
 
 .topnav {
     overflow: hidden;
@@ -113,11 +131,12 @@ button >.fa-gear{
 .topnav a {
     float: left;
     display: block;
-    color: black;
+    color: #2196f3;
     text-align: center;
     /* padding: 14px 16px; */
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .topnav a:hover {
@@ -135,7 +154,6 @@ button >.fa-gear{
     background-color: #eff3f4;
     display: flex;
     align-items: center;
-    width: 90%;
 }
 
 .topnav input[type=text] {
@@ -169,12 +187,10 @@ button >.fa-gear{
     gap: 25px;
 }
 
-.container-tweetar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 30px;
-}
+.container-tweetar{
+    width: 100%;
+ }
+ 
 
 .notices{
     width: 100%;
@@ -185,7 +201,18 @@ button >.fa-gear{
 
 .container-notices{
     padding: 20px;
+    font-size:16px;
 }
+
+.title-news {
+    font-size: 15px;
+    color: var(--font-gray);
+}
+
+
+.blue-highlight {
+    color: #2196f3;
+ } 
 
 .space-tweet-notice{
     height: 40px;
