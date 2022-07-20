@@ -1,3 +1,5 @@
+from distutils.command import upload
+
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
@@ -35,3 +37,9 @@ class Comentario(models.Model):
 
     def get_absolute_url(self):
         return reverse('post_list')
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(
+        User, on_delete=models.DO_NOTHING, related_name="profile")
+    foto = models.ImageField(upload_to='profile/fotos')

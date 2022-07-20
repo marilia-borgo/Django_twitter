@@ -1,12 +1,15 @@
 from django.contrib import admin
 
-from .models import Post, Comentario
+from .models import Comentario, Post, Profile
+
 # Register your models here.
 
-class ComentarioInline(admin.TabularInline): # new
+
+class ComentarioInline(admin.TabularInline):  # new
     model = Comentario
 
-class PostAdmin(admin.ModelAdmin): # new
+
+class PostAdmin(admin.ModelAdmin):  # new
     inlines = [
         ComentarioInline,
     ]
@@ -14,3 +17,4 @@ class PostAdmin(admin.ModelAdmin): # new
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Comentario)
+admin.site.register(Profile)
