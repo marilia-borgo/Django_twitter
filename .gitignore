@@ -212,3 +212,4 @@ post/migrations/__pycache__
 post/__pycache__
 Twitter/__pycache__
 
+staticfiles/
