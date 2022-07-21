@@ -146,12 +146,9 @@ os.makedirs(STATIC_ROOT, exist_ok=True)
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-<<<<<<< HEAD
-=======
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = 'static/'
 
->>>>>>> save
 
 # mediafiles
 
