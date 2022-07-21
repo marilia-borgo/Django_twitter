@@ -1,5 +1,7 @@
 :root {
     --font-gray: #5b6b78;
+    --blue-twitter: #2196F3;
+    --blue-twitter-hover: #1b89e3;
 }
 
 body {
@@ -93,7 +95,7 @@ button >.fa-gear{
 }
 
 .tweet{
-    padding: 10px 16px;
+    padding: 20px 16px 10px 16px;
 }
 
 .space-tweet{
@@ -101,8 +103,9 @@ button >.fa-gear{
 }
 
 .username-text{
-    color: gray;
+    color: #5b6b78;
     font-size: 15px;
+    font-weight: 400;
 }
 
 .reactions{
@@ -113,12 +116,12 @@ button >.fa-gear{
 
 .tamanho-reactions{
     width: 20px;
+    fill: var(--font-gray);
 }
 
 .filtros{
-    margin-left:10px;
+    margin: 20px 0 0 10px;
     width: 350px;
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
  } 
@@ -128,32 +131,27 @@ button >.fa-gear{
     background-color: white;
 }
 
-.topnav a {
+.read-more {
     float: left;
     display: block;
-    color: #2196f3;
+    color: var(--blue-twitter);
     text-align: center;
-    /* padding: 14px 16px; */
     text-decoration: none;
     font-size: 15px;
     font-weight: 400;
 }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #2196F3;
-    color: white;
+.read-more:hover {
+    color: var(--blue-twitter-hover);
+    transition: 0.3s;
 }
 
 .topnav .search-container {
     border-radius: 20px;
-    background-color: #eff3f4;
+    background-color: #f3f4ef;
     display: flex;
     align-items: center;
+    border: 1px #f3f4ef solid;
 }
 
 .topnav input[type=text] {
@@ -176,9 +174,12 @@ button >.fa-gear{
     cursor: pointer;
 }
 
-.topnav .search-container button:hover {
-    background: gray;
+.search-container:focus-within {
+    background: #FFF;
+    border: 1px var(--blue-twitter) solid;
+    color:var(--blue-twitter);
 }
+
 
 .search-style{
     padding: 4px;
@@ -192,16 +193,21 @@ button >.fa-gear{
  }
  
 
-.notices{
+.news {
     width: 100%;
     height: fit-content;
     background: #eff3f4;
     border-radius: 20px;
 }
 
-.container-notices{
+.container-news{
     padding: 20px;
     font-size:16px;
+}
+
+.news-hover:hover {
+    background-color: #e8eaeb;
+    transition: 0.3s;
 }
 
 .title-news {
@@ -211,7 +217,7 @@ button >.fa-gear{
 
 
 .blue-highlight {
-    color: #2196f3;
+    color: var(--blue-twitter);
  } 
 
 .space-tweet-notice{
@@ -220,20 +226,31 @@ button >.fa-gear{
 
 .btn-tweetar{
     border: none;
-    background-color: #2196F3;
+    background-color: var(--blue-twitter);
     height: 37px;
     width: 100px;
     border-radius: 30px;
     color: white;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 13px;
     cursor: pointer;
+}
+
+.btn-tweetar:hover {
+    background-color: #1b89e3;
+    transition: 0.3s;
 }
 
 .input-tweet{
     border: none;
     width: 350px;
     font-size: 17px;
+}
+
+.total-likes {
+    font-size: 16px;
+    color: var(--font-gray);
+    font-weight: 400;
 }
 
 .container-comentario{
@@ -251,9 +268,13 @@ button >.fa-gear{
     margin-bottom: 15px;
 }
 
-.image-profile-post{
+.image-profile-post {
     width: 50px;
     border-radius: 35px;
+}
+
+.name-user {
+    font-size: 16px;
 }
 
 .margin-post{
