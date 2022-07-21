@@ -1,0 +1,128 @@
+
+:root {
+    --azul-twitter: #1d9bf0;
+}
+
+body{
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+    display: flex;
+}
+
+.area-imagem {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.capa-login {
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.icon-twitter-imagem {
+    color: #FFFFFF;
+    font-size: 20rem;
+}
+
+.container {
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 20px;
+}
+
+.conteudo-login{
+    background-color: #FFFFFF;
+    height: fit-content;
+    width: 517px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.btn-login {
+    font-size: 10px;
+    height: 35px;
+    width: 250px;
+    padding: 0 16px;
+    border-radius: 999px;
+    border: 1px solid #dadce0;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-login:hover {
+    background-color: #ecf3fe;
+    transition: 0.3s;
+    border: 1px solid #d2e3fc;
+}
+
+.btn-login:active {
+    background-color: #e0ebfd;
+    transition: 0.3s;
+}
+
+.link-login{
+    text-decoration: none;
+    color: #0f1419;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.termos-servico {
+    font-size: 11px;
+    width: 300px;
+}
+
+.font-blue {
+    color: var(--azul-twitter);
+}
+
+.font-white {
+    color: #FFFFFF;
+}
+
+.font-sem-serif{
+    margin-bottom: 10px;
+}
+
+.titulo-principal {
+    margin: 48px 0;
+    font-size: 3rem;
+}
+
+.titulo-secundario {
+    margin: 0 0 32px;
+    font-size: 1.5rem;
+}
+
+.titulo-terciario {
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+.titulo {
+    font-family: 'Archivo', sans-serif;
+}
+
+.icon-twitter{
+    font-size: 42px;
+    padding: 0 0 12px;
+    color: var(--azul-twitter);
+}
+
+.icon-google {
+    width: 12px;
+    margin-right: 0.3rem;
+}
+
+p {
+    color: #536471
+}

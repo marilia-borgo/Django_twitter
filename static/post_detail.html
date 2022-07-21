@@ -1,0 +1,7 @@
+{% block content %}
+<div class="post-entry">
+    <p>{{ post.postagem }}</p>
+</div>
+<p><a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post</a></p>
+{% endblock content %}
+<a href="{% url 'post_list' %}">Voltar</a>

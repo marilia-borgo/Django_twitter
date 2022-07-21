@@ -6,7 +6,7 @@ from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView
 from GoogleNews import GoogleNews
 
-from .models import Comentario, Post
+from .models import Comentario, Post, Profile
 
 googlenews = GoogleNews()
 googlenews = GoogleNews(period='d')
@@ -73,3 +73,18 @@ class PostDeleteView(DeleteView):  # new
     model = Post
     template_name = 'post/post_delete.html'
     success_url = reverse_lazy('post_list')
+
+
+def perfil(request):
+    posts = Post.objects.order_by('-date_posted')
+    comentarios = Comentario.objects.all()
+    noticias = googlenews.results()
+    bio = Profile.objects.all()
+    return render(request, 'post/perfil.html', {
+        "posts": posts,
+        "comentarios": comentarios,
+        "noticias": noticias,
+        "bio": bio,
+        
+    })
+

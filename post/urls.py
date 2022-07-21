@@ -10,4 +10,5 @@ urlpatterns = [
     path('posts/new_post', views.tweet, name="new.post"),
     path('logado/<int:post_id>/comentarios', views.comentarios, name='view.comentario'),
     path('like/<int:pk>',views.LikeView, name="like_post"),
+    path('perfil/', views.perfil, name='perfil'),
 ]

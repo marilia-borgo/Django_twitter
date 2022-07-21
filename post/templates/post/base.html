@@ -13,6 +13,7 @@
     <link rel="icon" href="{% static 'Login/imagens/title-twitter.png'%}">
     <!-- título -->
     <title>Twitter Brasil | {{ request.user.username }}</title>
+    
 
     <!-- font-awsome -->
     <script src="https://kit.fontawesome.com/2fd1f5b83e.js" crossorigin="anonymous"></script>
@@ -43,6 +44,7 @@
             <div class="timeline">
                 <div class="tweet">
                     <h1 class="ola">olá {{ request.user.username }}</h1>
+                    <!-- <h3>{{ request.profile.bio }}</h3> -->
                     <div class="container-tweetar">
                         <img class="image-profile-post" src="{{ request.user.profile.foto.url }}" alt="">
                         <form action="{% url 'new.post' %}" method="post">
