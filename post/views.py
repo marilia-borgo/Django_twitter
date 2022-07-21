@@ -18,10 +18,11 @@ def post_list(request):
     posts = Post.objects.order_by('-date_posted')
     comentarios = Comentario.objects.all()
     noticias = googlenews.results()
+
     return render(request, 'post/base.html', {
         "posts": posts,
         "comentarios": comentarios,
-        "noticias": noticias
+        "noticias": noticias,
     })
 
 
