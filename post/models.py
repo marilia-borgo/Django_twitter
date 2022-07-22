@@ -1,11 +1,14 @@
+import base64
+import sys
 from distutils.command import upload
 
+from django import dispatch
 from django.contrib.auth.models import User
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.urls import reverse
 from django.utils import timezone
-
-# Create your models here.
 
 
 class Post(models.Model):
@@ -40,12 +43,21 @@ class Comentario(models.Model):
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.DO_NOTHING, related_name="profile")
+    user = models.OneToOneField(
+        User, on_delete=models.DO_NOTHING, related_name="profile")
     foto = models.ImageField(upload_to='profile/fotos')
-    bio=models.TextField(null=True, blank=True)
-    capa =models.URLField(null=True)
-    
-
-   
+    bio = models.TextField(null=True, blank=True)
+    capa = models.URLField(null=True)
+    image64 = models.TextField(null=True, blank=True)
 
 
+@receiver(post_save, sender=Profile)
+def to_base64(sender, instance, **kwargs):
+    with open('/home/lucassilva/Twitter-clone/Django_twitter/'+instance.foto.url, "rb") as image:
+        b64_string = base64.b64encode(image.read())
+
+    instance.image64 = b64_string.decode('utf-8')
+
+    post_save.disconnect(to_base64, sender=Profile)
+    instance.save(update_fields=['image64'])
+    post_save.connect(to_base64, sender=Profile)

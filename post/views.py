@@ -85,6 +85,5 @@ def perfil(request):
         "comentarios": comentarios,
         "noticias": noticias,
         "bio": bio,
-        
-    })
 
+    })

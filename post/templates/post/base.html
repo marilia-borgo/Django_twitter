@@ -47,7 +47,7 @@
                     <h1 class="ola">olá {{ request.user.username }}</h1>
                     <!-- <h3>{{ request.profile.bio }}</h3> -->
                     <div class="container-tweetar">
-                        <img class="image-profile-post" src="{{ request.user.profile.foto.url }}" alt="">
+                        <img class="image-profile-post" src="{{ request.user.profile.image64 }}" alt="">
                         <form action="{% url 'new.post' %}" method="post">
                             {% csrf_token %}
                             <input type="text" name="new_tweet" placeholder="O que está acontecendo?" class="input-tweet">
@@ -62,7 +62,7 @@
                             <div class="container-tweet">
                                 <div class="tweet">
                                     <div class="header-tweet">
-                                        <img class="image-profile-post" src="{{ post.user.profile.foto.url }}" alt=""><h2 class="name-user">{{post.user}}</h2> 
+                                        <img class="image-profile-post" src="data:image/png;base64, {{ post.user.profile.image64 }}" alt=""><h2 class="name-user">{{post.user}}</h2> 
                                         <span class="username-text">@{{post.user}} {{ post.date_posted }}</span>
                                     </div>
                                     <a class="margin-post" href="{% url 'post_detail' post.pk %}">{{ post }}</a>
@@ -96,7 +96,7 @@
                                         {% if post.id == comentario.id_post_id %}
                                             <div class="container-comentario">
                                                 <div class="header-tweet">
-                                                    <img class="image-profile-post" src="{{ comentario.user.profile.foto.url }}" alt="">
+                                                    <img class="image-profile-post" src="{{ comentario.user.profile.image64}}" alt="">
                                                     <h3>{{ comentario.user }}</h3>
                                                 </div>
                                                 <p class="margin-post">{{ comentario }}</p> 
