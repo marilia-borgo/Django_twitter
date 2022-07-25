@@ -128,7 +128,6 @@ p {
 }
 
 
-
 @media (max-width: 1000px){
     .icon-twitter-imagem {
         font-size: 15rem;
@@ -190,4 +189,26 @@ p {
         margin-left: 4rem;
     }
 
+}
+
+@media (max-width: 440px){
+    .container {
+        margin: 0 0 0 1rem;
+    }
+
+    .conteudo-login {
+        width: 100%;
+    }
+
+    .titulo-principal {
+        font-size: 2.5rem;
+    }
+
+    .btn-login {
+        width: 100%;
+    }
+
+    .termos-servico {
+        width: 100%;
+    }
 }
