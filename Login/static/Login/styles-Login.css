@@ -3,21 +3,22 @@
     --azul-twitter: #1d9bf0;
 }
 
-body{
+body {
     background-color: #FFFFFF;
     font-family: sans-serif;
     display: flex;
+
 }
 
 .area-imagem {
-    width: 60%;
+    width: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .capa-login {
-    position: fixed;
+    position: absolute;
     z-index: -1;
     height: 100%;
     width: 100%;
@@ -31,23 +32,22 @@ body{
 .container {
     background-color: #FFFFFF;
     display: flex;
-    padding: 20px;
+    width: 45%;
+    padding: 8rem 20px 20px;
 }
 
 .conteudo-login{
     background-color: #FFFFFF;
     height: fit-content;
-    width: 517px;
-    border-radius: 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 16px;
 }
 
 .btn-login {
-    font-size: 10px;
-    height: 35px;
-    width: 250px;
+    height: 38px;
+    width: 300px;
     padding: 0 16px;
     border-radius: 999px;
     border: 1px solid #dadce0;
@@ -72,7 +72,7 @@ body{
 .link-login{
     text-decoration: none;
     color: #0f1419;
-    font-size: 0.7rem;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -104,7 +104,7 @@ body{
 }
 
 .titulo-terciario {
-    font-size: 1rem;
+    font-size: 17px;
     margin-top: 3rem;
 }
 
@@ -125,4 +125,90 @@ body{
 
 p {
     color: #536471
+}
+
+
+@media (max-width: 1000px){
+    .icon-twitter-imagem {
+        font-size: 15rem;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 780px){
+    body {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        padding-top: 1rem;
+        margin-left: 4rem;
+    }
+
+
+    .capa-login {
+        display: none;
+    }
+
+    .area-imagem {
+        height: 20rem;
+        width: 100%;
+        background-image: url('../Login/imagens/twitter_capa.png');
+    }
+
+    .icon-twitter-imagem {
+        font-size: 15rem;
+    }
+
+    .btn-login {
+        height: 40px;
+    }
+}
+
+@media (max-width: 690px){
+
+    .icon-twitter {
+        margin-top: 2rem;
+    }
+
+    .titulo-principal {
+        font-size: 3rem;
+        margin: 1rem 0;
+    }
+
+    .titulo-secundario {
+        font-size: 2rem;
+    }
+
+    .container {
+        margin-left: 4rem;
+    }
+
+}
+
+@media (max-width: 440px){
+    .container {
+        margin: 0 0 0 1rem;
+    }
+
+    .conteudo-login {
+        width: 100%;
+    }
+
+    .titulo-principal {
+        font-size: 2.5rem;
+    }
+
+    .btn-login {
+        width: 100%;
+    }
+
+    .termos-servico {
+        width: 100%;
+    }
 }
