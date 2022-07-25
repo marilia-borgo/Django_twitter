@@ -1,10 +1,11 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
-from django.template import context
+# from django.template import context
 from django.urls import reverse, reverse_lazy
 from django.views.generic import DetailView
-from django.views.generic.edit import CreateView, DeleteView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from GoogleNews import GoogleNews
+from .forms import ProfileForm
 
 from .models import Comentario, Post, Profile
 
@@ -87,4 +88,14 @@ def perfil(request):
         "bio": bio,
         
     })
+def update_bio(request, id):  
+    obj = get_object_or_404(Profile, id = id)
+    form = ProfileForm(request.POST or None, instance = obj) 
+    if form.is_valid(): 
+        form.save() 
+        return HttpResponseRedirect(reverse('perfil'))
+    context = {"form":form}
+    return render(request, "post/perfil_alter.html", context) 
+  
+  
 

@@ -1,5 +1,5 @@
 from django.urls import path 
-from .views import PostCreateView, PostDetailView, PostDeleteView,LikeView
+from .views import PostCreateView, PostDetailView, PostDeleteView,LikeView, update_bio
 from . import views
 
 urlpatterns = [
@@ -11,4 +11,5 @@ urlpatterns = [
     path('logado/<int:post_id>/comentarios', views.comentarios, name='view.comentario'),
     path('like/<int:pk>',views.LikeView, name="like_post"),
     path('perfil/', views.perfil, name='perfil'),
+    path('alter/<id>',views.update_bio,name="update.profile")
 ]
