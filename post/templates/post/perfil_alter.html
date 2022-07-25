@@ -1,14 +1,19 @@
+{% extends 'post/base.html' %}
+{% load static %}
 
-<div class="main">
-    <!-- Create a Form -->
-    <form method="POST">
-        <!-- Security token by Django -->
-        {% csrf_token %}
+    {%block timeline%}
+    
+        <div class="tweet">
+            <!-- Create a Form -->
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+        
+                <input type="submit" value="Atualizar">
+            </form>
+        
+        </div>
+
+
  
-        <!-- form as paragraph -->
-        {{ form.as_p }}
- 
-        <input type="submit" value="Update">
-    </form>
- 
-</div>
+    {% endblock %}
