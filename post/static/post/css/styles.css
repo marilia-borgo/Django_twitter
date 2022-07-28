@@ -4,6 +4,10 @@
     --blue-twitter-hover: #1b89e3;
 }
 
+.cabecalho {
+    display: none;
+}
+
 body {
     font-family: 'Arial', sans-serif;
  }
@@ -281,6 +285,8 @@ button >.fa-gear{
     margin-left: 60px;
 }
 
-/* .container-comentario{
-
-} */
+@media (max-width: 1140px) {
+    .cabecalho {
+        display: block;
+    }
+}
