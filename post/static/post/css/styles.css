@@ -4,6 +4,10 @@
     --blue-twitter-hover: #1b89e3;
 }
 
+.cabecalho {
+    display: none;
+}
+
 body {
     font-family: 'Arial', sans-serif;
  }
@@ -314,6 +318,7 @@ button >.fa-gear{
     margin-left: 20px;
 
 }
+
 h3{
     margin-top: 7px;
     margin-bottom:7px;
