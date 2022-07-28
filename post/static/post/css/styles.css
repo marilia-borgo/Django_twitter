@@ -216,6 +216,10 @@ button >.fa-gear{
 }
 
 
+#btn-mobile {
+    display: none;
+}
+
 .blue-highlight {
     color: var(--blue-twitter);
  } 
@@ -224,7 +228,7 @@ button >.fa-gear{
     height: 40px;
 }
 
-.btn-tweetar{
+.btn-tweetar {
     border: none;
     background-color: var(--blue-twitter);
     height: 37px;
@@ -263,6 +267,8 @@ button >.fa-gear{
     padding: 2%;
 }
 
+
+
 .header-tweet{
     display: flex;
     align-items: center;
@@ -285,7 +291,7 @@ button >.fa-gear{
     margin-left: 60px;
 }
 
-.capa{
+.capa {
     height: 200px;
     width: 600px;
     
@@ -304,7 +310,7 @@ button >.fa-gear{
     border-style: solid;
 }
 
-.bio{
+.bio {
     margin-top: 60px;
 }
 .botao-alterar-perfil{
@@ -329,6 +335,10 @@ label{
     margin-top:2000px;
 }
 
+#menu {
+    display: none;
+}
+
 @media (max-width: 1143px){
     .btn-text {
         display: none;
@@ -344,9 +354,6 @@ label{
         align-self: flex-start;
     }
 
-    .btn-news {
-        display: none;
-    }
 
     .filtros {
         width: 30%;
@@ -354,16 +361,119 @@ label{
 }
 
 @media (max-width: 987px)  {
+    .container {
+        justify-content: flex-start;
+        padding-left: 10%;
+    }
+
     .filtros {
         display: none;
     }
 
+    .reactions {
+        gap: 5.5rem
+    }
 
-    .btn-news {
+    .settings {
+        position: fixed;
+        left: 30px;
+    }
+
+    .timeline {
+        width: 70%;
+    }
+
+
+    #btn-mobile {
         display: block;
     }
 
-    .fa-newspaper {
-        font-size: 1.6rem;
+    #menu {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        width: 0;
+        background-color: #FFF;
+        position: absolute;
+        z-index: 1000;
+        transition: 0.3s;
+        top: 20px;
+        left: 70px;
     }
+
+    #nav.active #menu {
+        display: block;
+        width: 29rem;
+        opacity: 100%;
+        visibility: visible;
+    }
+} 
+
+
+@media (max-width: 769px) {
+    .container {
+        justify-content: flex-start;
+    }
+
+
+    .settings {
+        margin-left: 1em;
+    }
+
+}
+
+@media (max-width: 614px) {
+
+    .conteudo-page {
+        justify-content: flex-start;
+    }
+
+    .bird {
+        margin-right: 20px;
+    }
+
+    .settings {
+        margin-left: 25px;
+        width: 10%;
+        align-items: center;
+    }
+
+    .explore {
+        align-self: center;
+        margin-bottom: 15px;
+    }
+
+    .timeline {
+        min-width: 0;
+        width: 75%;
+    }
+
+    #menu {
+        left: 25%;
+    }
+
+    .conteudo-page {
+        gap: 0;
+        margin-left: 10px;
+    }
+
+    .reactions {
+        gap: 40px;
+    }
+
+    .tamanho-svg {
+        width: 25px;
+    }
+
+    .btn-tweetar {
+        width: 5rem;
+        height: 2rem;
+        margin-top: 0.6rem;
+    }
+
+    .username-text {
+        font-size: 10px;
+    }
+
+
 }
