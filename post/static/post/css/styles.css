@@ -333,3 +333,34 @@ label{
     margin-top:2000px;
 }
 
+@media (max-width: 1143px){
+    .cabecalho {
+        display: none;
+    }
+
+    .btn-text {
+        display: none;
+
+    }
+
+    .settings {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+    }
+
+    .explore {
+        align-self: flex-start;
+    }
+
+    .filtros {
+        width: 30%;
+    }
+}
+
+@media (max-width: 987px)  {
+    .filtros {
+        display: none;
+    }
+}
