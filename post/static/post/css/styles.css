@@ -4,10 +4,6 @@
     --blue-twitter-hover: #1b89e3;
 }
 
-.cabecalho {
-    display: none;
-}
-
 body {
     font-family: 'Arial', sans-serif;
  }
@@ -319,7 +315,7 @@ button >.fa-gear{
 
 }
 
-h3{
+h3 {
     margin-top: 7px;
     margin-bottom:7px;
 }
@@ -334,24 +330,22 @@ label{
 }
 
 @media (max-width: 1143px){
-    .cabecalho {
-        display: none;
-    }
-
     .btn-text {
         display: none;
-
     }
 
     .settings {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-
     }
 
     .explore {
         align-self: flex-start;
+    }
+
+    .btn-news {
+        display: none;
     }
 
     .filtros {
@@ -362,5 +356,14 @@ label{
 @media (max-width: 987px)  {
     .filtros {
         display: none;
+    }
+
+
+    .btn-news {
+        display: block;
+    }
+
+    .fa-newspaper {
+        font-size: 1.6rem;
     }
 }
