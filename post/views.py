@@ -5,8 +5,8 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView
 from GoogleNews import GoogleNews
-from .forms import ProfileForm
 
+from .forms import ProfileForm
 from .models import Comentario, Post, Profile
 
 googlenews = GoogleNews()

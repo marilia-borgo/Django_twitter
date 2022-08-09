@@ -34,4 +34,4 @@ jobs:
         cp .env-sample .env
     - name: Testes de aplicação com Pytest
       run: |
-        pytest
+        pytest --cov
