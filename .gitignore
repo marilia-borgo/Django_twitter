@@ -213,3 +213,5 @@ post/__pycache__
 Twitter/__pycache__
 
 staticfiles/
+
+.vscode

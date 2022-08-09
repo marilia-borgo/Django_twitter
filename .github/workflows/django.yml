@@ -7,6 +7,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+     services:
+      postgres:
+        image: postgres:13.3
+        env:
+          POSTGRES_DB: db_twitter
+          POSTGRES_USER: lucas_db
+          POSTGRES_PASSWORD: luke93
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 55432
+        ports: [ '55432:5432' ]
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.9
@@ -19,3 +29,9 @@ jobs:
     - name: Lint com Flake8
       run: |
         flake8
+    - name: Copiando arquivo de configuração
+      run: |
+        cp .env-sample .env
+    - name: Testes de aplicação com Pytest
+      run: |
+        pytest

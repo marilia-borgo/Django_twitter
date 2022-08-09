@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render
 # from django.template import context
 from django.urls import reverse, reverse_lazy
 from django.views.generic import DetailView
-from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.edit import CreateView, DeleteView
 from GoogleNews import GoogleNews
 from .forms import ProfileForm
 
@@ -51,7 +51,7 @@ def LikeView(request, pk):
 def get_context_data(request, post_id):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
     total_likes = post.total_likes()
-    context["total_likes"] = total_likes
+    context ["total_likes"] = total_likes
     return context
 
 
@@ -86,16 +86,15 @@ def perfil(request):
         "comentarios": comentarios,
         "noticias": noticias,
         "bio": bio,
-        
-    })
-def update_bio(request, id):  
-    obj = get_object_or_404(Profile, id = id)
-    form = ProfileForm(request.POST or None, instance = obj) 
-    if form.is_valid(): 
-        form.save() 
-        return HttpResponseRedirect(reverse('perfil'))
-    context = {"form":form}
-    return render(request, "post/perfil_alter.html", context) 
-  
-  
 
+    })
+
+
+def update_bio(request, id):
+    obj = get_object_or_404(Profile, id=id)
+    form = ProfileForm(request.POST or None, instance=obj)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('perfil'))
+    context = {"form": form}
+    return render(request, "post/perfil_alter.html", context)

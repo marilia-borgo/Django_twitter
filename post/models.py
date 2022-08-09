@@ -1,4 +1,4 @@
-from distutils.command import upload
+
 
 from django.contrib.auth.models import User
 from django.db import models
@@ -42,10 +42,5 @@ class Comentario(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.DO_NOTHING, related_name="profile")
     foto = models.ImageField(upload_to='profile/fotos')
-    bio=models.TextField(null=True, blank=True)
-    capa =models.URLField(null=True)
-    
-
-   
-
-
+    bio = models.TextField(null=True, blank=True)
+    capa = models.URLField(null=True)
