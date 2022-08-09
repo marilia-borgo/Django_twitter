@@ -51,7 +51,7 @@ def LikeView(request, pk):
 def get_context_data(request, post_id):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
     total_likes = post.total_likes()
-    context ["total_likes"] = total_likes
+    context = {"total_likes": total_likes}
     return context
 
 

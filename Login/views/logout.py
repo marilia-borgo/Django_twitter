@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth import logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-        
+
 class LogoutView(LoginRequiredMixin, View):
     def get(self, request):
         logout(request)
